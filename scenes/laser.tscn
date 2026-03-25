@@ -3,13 +3,23 @@
 [ext_resource type="Script" uid="uid://bh4n7ucn36k1d" path="res://scipts/laser.gd" id="1_a7dhc"]
 [ext_resource type="Texture2D" uid="uid://b185q0kfqnenl" path="res://assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png" id="2_jjj73"]
 
-[node name="Laser" type="Node2D" unique_id=636528781]
-position = Vector2(101, 595)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7dhc"]
+radius = 7.0
+height = 38.0
+
+[node name="Laser" type="Area2D" unique_id=1249953278]
+position = Vector2(105, 595)
 script = ExtResource("1_a7dhc")
 speed = 400
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1457263336]
+[node name="LaserGraphic" type="Sprite2D" parent="." unique_id=1457263336]
 texture = ExtResource("2_jjj73")
 metadata/_edit_lock_ = true
+
+[node name="LaserCollision" type="CollisionShape2D" parent="." unique_id=836712938]
+shape = SubResource("CapsuleShape2D_a7dhc")
+metadata/_edit_group_ = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

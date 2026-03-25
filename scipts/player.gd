@@ -7,11 +7,11 @@ func _process(delta: float) -> void:
 	var mouse_pos = get_global_mouse_position()
 	position.x = mouse_pos.x
 	
-	if (position.x - 99/2) <= 0:
-		position.x = 99/2
+	if (position.x - 49) <= 0:
+		position.x = 49
 	
-	if (position.x + 99/2) >= 480:
-		position.x = 480 - 99/2
+	if (position.x + 49) >= 480:
+		position.x = 480 - 49
 		
 	if Input.is_action_just_pressed("Fire"):
 		var new_laser = laser_tscn.instantiate()

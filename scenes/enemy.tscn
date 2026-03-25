@@ -3,10 +3,21 @@
 [ext_resource type="Script" uid="uid://bsrt3yplnqgss" path="res://scipts/enemy.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://28cguiugbixg" path="res://assets/kenney_space-shooter-redux/PNG/Enemies/enemyRed1.png" id="2_4ra3w"]
 
-[node name="Enemy" type="Node2D" unique_id=679756329]
+[sub_resource type="CircleShape2D" id="CircleShape2D_md0e3"]
+radius = 38.052597
+
+[node name="Enemy" type="Area2D" unique_id=598743135]
+position = Vector2(223, 65)
 script = ExtResource("1_md0e3")
 metadata/_edit_group_ = true
 
 [node name="EnemyGraphic" type="Sprite2D" parent="." unique_id=694709000]
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_4ra3w")
+
+[node name="EnemyCollision" type="CollisionShape2D" parent="." unique_id=886703507]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_md0e3")
+metadata/_edit_group_ = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
