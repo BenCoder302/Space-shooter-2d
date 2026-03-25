@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var laser_tscn: PackedScene
+
 func _process(delta: float) -> void:
 	#print("This happens at every moment of game.")
 	var mouse_pos = get_global_mouse_position()
@@ -10,3 +12,8 @@ func _process(delta: float) -> void:
 	
 	if position.x >= 480:
 		position.x = 480
+		
+	if Input.is_action_just_pressed("Fire"):
+		var new_laser = laser_tscn.instantiate()
+		add_sibling(new_laser)
+		new_laser.position = position

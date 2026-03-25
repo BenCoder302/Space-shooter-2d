@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dfurvt3wn2tkn" path="res://assets/skybox/skybox/1.png" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://bsdcsgqc3g0od" path="res://scipts/player.gd" id="2_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://c0eqqtvvqfh75" path="res://assets/kenney_space-shooter-redux/PNG/playerShip1_blue.png" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://h5awh74k7677" path="res://scenes/laser.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node2D" unique_id=807371507]
 
@@ -14,6 +15,7 @@ metadata/_edit_lock_ = true
 [node name="Player" type="Node2D" parent="." unique_id=2101468612]
 position = Vector2(239, 572)
 script = ExtResource("2_jyhfs")
+laser_tscn = ExtResource("4_jyhfs")
 metadata/_edit_lock_ = true
 
 [node name="ShipGraphic" type="Sprite2D" parent="Player" unique_id=1810205604]
