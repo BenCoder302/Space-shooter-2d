@@ -8,6 +8,9 @@
 [ext_resource type="Script" uid="uid://ev4yh7duuko3" path="res://scipts/enemy_spawner.gd" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://cr4u2d5n3rcgn" path="res://scipts/label.gd" id="7_o6xl0"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6xl0"]
+radius = 46.238514
+
 [sub_resource type="LabelSettings" id="LabelSettings_tefeu"]
 font_size = 30
 
@@ -18,7 +21,7 @@ position = Vector2(205, 482)
 texture = ExtResource("1_sugp2")
 metadata/_edit_lock_ = true
 
-[node name="Player" type="Node2D" parent="." unique_id=2101468612]
+[node name="Player" type="Area2D" parent="." unique_id=447097957]
 position = Vector2(239, 572)
 script = ExtResource("2_jyhfs")
 laser_tscn = ExtResource("4_jyhfs")
@@ -28,6 +31,10 @@ metadata/_edit_lock_ = true
 scale = Vector2(1, 1.307)
 texture = ExtResource("3_tbgi4")
 metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2073552782]
+shape = SubResource("CircleShape2D_o6xl0")
+metadata/_edit_group_ = true
 
 [node name="EnemySpawner" type="Node2D" parent="." unique_id=1397634703]
 script = ExtResource("6_tefeu")
@@ -43,4 +50,5 @@ text = "Score: 0"
 label_settings = SubResource("LabelSettings_tefeu")
 script = ExtResource("7_o6xl0")
 
+[connection signal="area_entered" from="Player" to="Player" method="_on_area_entered"]
 [connection signal="timeout" from="EnemySpawner/Timer" to="EnemySpawner" method="spawn_enemy_ship"]
