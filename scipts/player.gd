@@ -23,3 +23,4 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy"):
 		queue_free()
 		GameState.is_game_over = true
+		GameState.score -= 10

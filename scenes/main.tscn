@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://h5awh74k7677" path="res://scenes/laser.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://b7pqlnu1t0v8p" path="res://scenes/enemy.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://ev4yh7duuko3" path="res://scipts/enemy_spawner.gd" id="6_tefeu"]
-[ext_resource type="Script" uid="uid://cr4u2d5n3rcgn" path="res://scipts/label.gd" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://cr4u2d5n3rcgn" path="res://scipts/score_label.gd" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://bhk1tpxl3xfsj" path="res://scipts/game_over_label.gd" id="8_tipki"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o6xl0"]
