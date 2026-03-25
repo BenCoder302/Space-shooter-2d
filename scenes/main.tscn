@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://h5awh74k7677" path="res://scenes/laser.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://b7pqlnu1t0v8p" path="res://scenes/enemy.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://ev4yh7duuko3" path="res://scipts/enemy_spawner.gd" id="6_tefeu"]
+[ext_resource type="Script" uid="uid://cr4u2d5n3rcgn" path="res://scipts/label.gd" id="7_o6xl0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tefeu"]
+font_size = 30
 
 [node name="Main" type="Node2D" unique_id=807371507]
 
@@ -31,5 +35,12 @@ enemy_tscn = ExtResource("5_tbgi4")
 
 [node name="Timer" type="Timer" parent="EnemySpawner" unique_id=514478283]
 autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=139973494]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_tefeu")
+script = ExtResource("7_o6xl0")
 
 [connection signal="timeout" from="EnemySpawner/Timer" to="EnemySpawner" method="spawn_enemy_ship"]
