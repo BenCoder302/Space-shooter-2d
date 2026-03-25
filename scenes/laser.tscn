@@ -8,9 +8,7 @@ radius = 7.0
 height = 38.0
 
 [node name="Laser" type="Area2D" unique_id=1249953278]
-position = Vector2(105, 595)
 script = ExtResource("1_a7dhc")
-speed = 400
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 

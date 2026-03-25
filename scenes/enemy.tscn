@@ -7,7 +7,6 @@
 radius = 38.052597
 
 [node name="Enemy" type="Area2D" unique_id=598743135]
-position = Vector2(223, 65)
 script = ExtResource("1_md0e3")
 metadata/_edit_group_ = true
 
