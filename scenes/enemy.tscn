@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b7pqlnu1t0v8p"]
+
+[ext_resource type="Script" uid="uid://bsrt3yplnqgss" path="res://scipts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://28cguiugbixg" path="res://assets/kenney_space-shooter-redux/PNG/Enemies/enemyRed1.png" id="2_4ra3w"]
+
+[node name="Enemy" type="Node2D" unique_id=679756329]
+script = ExtResource("1_md0e3")
+metadata/_edit_group_ = true
+
+[node name="EnemyGraphic" type="Sprite2D" parent="." unique_id=694709000]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_4ra3w")

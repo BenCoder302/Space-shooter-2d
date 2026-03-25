@@ -6,6 +6,7 @@
 [node name="Laser" type="Node2D" unique_id=636528781]
 position = Vector2(101, 595)
 script = ExtResource("1_a7dhc")
+speed = 400
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
