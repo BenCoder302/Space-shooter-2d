@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b3jtv1ka7j4l"]
+
+[ext_resource type="Texture2D" uid="uid://dfurvt3wn2tkn" path="res://assets/skybox/skybox/1.png" id="1_rnnaw"]
+
+[node name="Main" type="Node2D" unique_id=807371507]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2101023738]
+position = Vector2(205, 482)
+texture = ExtResource("1_rnnaw")
