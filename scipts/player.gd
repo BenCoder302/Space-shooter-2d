@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 		add_sibling(new_laser)
 		new_laser.position = position
 
-
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy"):
 		queue_free()

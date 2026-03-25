@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bh4n7ucn36k1d" path="res://scipts/laser.gd" id="1_a7dhc"]
 [ext_resource type="Texture2D" uid="uid://b185q0kfqnenl" path="res://assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png" id="2_jjj73"]
+[ext_resource type="AudioStream" uid="uid://btawdq88hj0nw" path="res://assets/kenney_space-shooter-redux/Bonus/sfx_laser2.ogg" id="3_jjj73"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7dhc"]
 radius = 7.0
@@ -19,5 +20,9 @@ metadata/_edit_lock_ = true
 [node name="LaserCollision" type="CollisionShape2D" parent="." unique_id=836712938]
 shape = SubResource("CapsuleShape2D_a7dhc")
 metadata/_edit_group_ = true
+
+[node name="sfx_laser" type="AudioStreamPlayer2D" parent="." unique_id=95598910]
+stream = ExtResource("3_jjj73")
+volume_db = -16.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

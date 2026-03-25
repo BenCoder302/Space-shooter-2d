@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://ev4yh7duuko3" path="res://scipts/enemy_spawner.gd" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://cr4u2d5n3rcgn" path="res://scipts/score_label.gd" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://bhk1tpxl3xfsj" path="res://scipts/game_over_label.gd" id="8_tipki"]
+[ext_resource type="AudioStream" uid="uid://bi0k2scmjjinf" path="res://assets/kenney_space-shooter-redux/Bonus/sfx_lose.ogg" id="9_85g3d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o6xl0"]
 radius = 46.238514
@@ -63,6 +64,9 @@ label_settings = SubResource("LabelSettings_o6xl0")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_tipki")
+
+[node name="sfx_lose" type="AudioStreamPlayer2D" parent="GameOverLabel" unique_id=79706840]
+stream = ExtResource("9_85g3d")
 
 [connection signal="area_entered" from="Player" to="Player" method="_on_area_entered"]
 [connection signal="timeout" from="EnemySpawner/Timer" to="EnemySpawner" method="spawn_enemy_ship"]

@@ -1,6 +1,10 @@
 extends Node2D
 
 @export var speed = 400
+@onready var sfx_laser = $sfx_laser
+
+func _ready() -> void:
+	sfx_laser.play()
 
 func _process(delta: float) -> void:
 	position.y -= speed * delta

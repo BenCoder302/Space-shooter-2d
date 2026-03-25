@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsrt3yplnqgss" path="res://scipts/enemy.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://28cguiugbixg" path="res://assets/kenney_space-shooter-redux/PNG/Enemies/enemyRed1.png" id="2_4ra3w"]
+[ext_resource type="AudioStream" uid="uid://b1ue74i2scbaa" path="res://assets/kenney_space-shooter-redux/Bonus/sfx_shieldDown.ogg" id="3_4ra3w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_md0e3"]
 radius = 38.052597
@@ -18,5 +19,9 @@ texture = ExtResource("2_4ra3w")
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_md0e3")
 metadata/_edit_group_ = true
+
+[node name="sfx_destroy" type="AudioStreamPlayer2D" parent="." unique_id=1553531045]
+stream = ExtResource("3_4ra3w")
+volume_db = -10.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
